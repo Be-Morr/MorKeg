@@ -1,4 +1,6 @@
+const clickMe = document.getElementById("clickMe");
+clickMe.addEventListener("click", helloLog);
 
-function helloLog() {
-    console.log('Hello World');
-  };
+function helloLog(e) {
+  console.log("Helrld", e);
+}
