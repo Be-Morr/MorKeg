@@ -1,0 +1,26 @@
+p1 {
+  background-color: rgb(173, 27, 76);
+}
+.hello-snake {
+  background-color: rgb(212, 196, 196);
+  font-size: large;
+  text-align: center;
+  color: black;
+}
+.buttonStyle {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(72, 57, 158);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+);
+}
