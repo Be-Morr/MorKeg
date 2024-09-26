@@ -33,13 +33,13 @@ function helloLog(e) {
 // → 4
 
 // const countBs = (word) => {
-//   let numberOfB = 0;
-//   for (let i = 0; i < word.length; i++) {
-//     const char = word.charAt(i);
-//     if (char === "B") {
-//       numberOfB++;
-//     }
-//   }
-//   return numberOfB;
+  // let numberOfB = 0;
+  // for (let i = 0; i < word.length; i++) {
+  //   const char = word.charAt(i);
+  //   if (char === "B") {
+  //     numberOfB++;
+  //   }
+  // }
+  // return numberOfB;
 // };
 // console.log(countBs("BBbbOB"));
