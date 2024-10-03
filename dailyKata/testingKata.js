@@ -7,6 +7,16 @@
 // "12345"  -->  false
 // "a234"   -->  false
 
+function validatePIN(pin) {
+  debugger;
+  let pinString = `${pin}`;
+  return (
+    Number.isInteger(pin) && (pinString.length === 4 || pinString.length === 6)
+  );
+}
+// Can use
+// Math.floor(pin) === pin && (pinString.length === 4 || pinString.length === 6)
+// =======
 // function validatePIN(pin) {
 //   debugger;
 //   let pinString = `${pin}`;
@@ -14,8 +24,7 @@
 //     Number.isInteger(pin) && (pinString.length === 4 || pinString.length === 6)
 //   );
 // }
-// Can use
-// Math.floor(pin) === pin && (pinString.length === 4 || pinString.length === 6)
+// >>>>>>> main
 
 // The introduction of this book alluded to the following as a nice way to compute the sum of a range of numbers:
 
@@ -39,24 +48,6 @@
 //     }
 //   }
 //   return arrayRange;
-// };
-
-// const findShort = (s) => {
-//   debugger;
-//   let shortestWord = s.length;
-//   let currentWord = 0;
-//   for (i = 0; i <= s.length; i++) {
-//     if (s.charAt(i) !== "") {
-//       currentWord++;
-//     }
-//     if (s.charAt(i) === " ") {
-//       if (currentWord <= shortestWord) {
-//         shortestWord = currentWord;
-//         currentWord = 0;
-//       }
-//     }
-//   }
-//   return shortestWord - 1;
 // };
 
 const findShort = (s) => {
