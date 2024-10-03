@@ -3,10 +3,8 @@ clickMe.addEventListener("click", helloLog);
 
 function helloLog(e) {
   console.log("Hello World", e);
-// <<<<<<< th12
-// =======
-// }
 
+}
 // for (let hashVar = "#"; hashVar.length <= 7; hashVar += "#") {
 //   console.log(hashVar);
 // }
@@ -21,7 +19,7 @@ function helloLog(e) {
 //   } else {
 //     console.log(numb);
 //   }
-// >>>>>>> main
+
 // }
 
 // for (let hashVar = "#"; hashVar.length <= 7; hashVar += "#") {
@@ -52,6 +50,14 @@ function helloLog(e) {
 // → 4
 
 // const countBs = (word) => {
+  // let numberOfB = 0;
+  // for (let i = 0; i < word.length; i++) {
+  //   const char = word.charAt(i);
+  //   if (char === "B") {
+  //     numberOfB++;
+  //   }
+  // }
+  // return numberOfB;
 //   let numberOfB = 0;
 //   for (let i = 0; i < word.length; i++) {
 //     const char = word.charAt(i);
