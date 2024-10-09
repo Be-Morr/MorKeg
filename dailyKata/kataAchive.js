@@ -45,8 +45,8 @@ function removeChar(str) {
   return str.slice(1, -1);
 }
 
-// Format as =>  
-  // const removeChar = str => str.slice(1,-1)
+// Format as =>
+// const removeChar = str => str.slice(1,-1)
 
 // If you can't sleep, just count sheep!!
 // Task:
@@ -204,7 +204,6 @@ function alphabetPosition(text) {
   return numericalLetter.trim();
 }
 console.log(alphabetPosition("ebc."));
-
 
 // The introduction of this book alluded to the following as a nice way to compute the sum of a range of numbers:
 
