@@ -33,13 +33,72 @@ function validatePIN(pin) {
 // 35231 => [1,3,2,5,3]
 // 0 => [0]
 
+// const digitize = (n) => {
+//   debugger;
+//   const nString = `${n}`;
+//   let numberArray = [];
+//   for (i = 0; i < nString.length; i++) {
+//     numberArray.push(nString.charAt(i));
+//   }
+//   return numberArray.reverse();
+// };
+// // Producing an array of strings, not digits. instead of convertring them back to numbers, is there a way to cut the string portion out
+
 const digitize = (n) => {
-  debugger;
   const nString = `${n}`;
-  let numberArray = [];
-  for (i = 0; i < nString.length; i++) {
-    numberArray.push(nString.charAt(i));
-  }
-  return numberArray.reverse();
+  const nStringArray = nString.split("");
+  const nNumberArray = nStringArray.map(Number);
+  return nNumberArray.reverse();
 };
-// Producing an array of strings, not digits. instead of convertring them back to numbers, is there a way to cut the string portion out
+
+// Convert number to a string
+//Convert the String into an array of strings for each digit in the number
+//Convert the Array of strings back to numbers
+//Return the Array of numbers back in reverse order.
+// This can be simplified into
+// function digitize(n) {
+//   return String(n).split('').map(Number).reverse()
+// }
+
+const restaurants = [
+  {
+    resName: "Testaurant",
+    resCity: "Springfield",
+    resAddress: "123 Main Street Springfield",
+    resNotes: "Liked it",
+    resHours: [
+      {
+        day: "Monday",
+        isOpen: false,
+        resOpen: Null,
+        resClose: Null,
+      },
+      {
+        day: "Tuesday",
+        isOpen: true,
+        resOpen: 1100,
+        resClose: 2000,
+      },
+      {
+        day: "Wednesday",
+        isOpen: true,
+        resOpen: 1100,
+        resClose: 2000,
+      },
+      {
+        day: "Thursday",
+        isOpen: true,
+        resOpen: 1100,
+        resClose: 2200,
+      },
+    ],
+    resReviewNumber: 2567,
+    resReviewRating: 4.3,
+  },
+];
+
+const restaurantInfo = (query) => {
+  console.log(restaurants.resName);
+  console.log(restaurants.resAddress);
+  console.log(restaurants.resReviewRating);
+};
