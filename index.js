@@ -3,6 +3,7 @@ clickMe.addEventListener("click", helloLog);
 
 function helloLog(e) {
   console.log("Hello World", e);
+  console.log("Hello World", e);
 }
 
 // for (let hashVar = "#"; hashVar.length <= 7; hashVar += "#") {
