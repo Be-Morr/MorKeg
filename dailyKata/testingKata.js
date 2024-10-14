@@ -7,13 +7,13 @@
 // "12345"  -->  false
 // "a234"   -->  false
 
-function validatePIN(pin) {
-  const pinLength = `${Number(pin)}`;
-  return (
-    Math.floor(Number(pin)) === Math.abs(Number(pin)) &&
-    (pinLength.length === 4 || pinLength.length === 6)
-  );
-}
+// function validatePIN(pin) {
+//   const pinLength = `${Number(pin)}`;
+//   return (
+//     Math.floor(Number(pin)) === Math.abs(Number(pin)) &&
+//     (pinLength.length === 4 || pinLength.length === 6)
+//   );
+// }
 // There must be an easier way to test if a number is whole and positive
 
 // function validatePIN(pin) {
@@ -42,14 +42,14 @@ function validatePIN(pin) {
 //   }
 //   return numberArray.reverse();
 // };
-// // Producing an array of strings, not digits. instead of convertring them back to numbers, is there a way to cut the string portion out
+// // Producing an array of strings, not digits. instead of converting them back to numbers, is there a way to cut the string portion out
 
-const digitize = (n) => {
-  const nString = `${n}`;
-  const nStringArray = nString.split("");
-  const nNumberArray = nStringArray.map(Number);
-  return nNumberArray.reverse();
-};
+// const digitize = (n) => {
+//   const nString = `${n}`;
+//   const nStringArray = nString.split("");
+//   const nNumberArray = nStringArray.map(Number);
+//   return nNumberArray.reverse();
+// };
 
 // Convert number to a string
 //Convert the String into an array of strings for each digit in the number
@@ -62,16 +62,16 @@ const digitize = (n) => {
 
 const restaurants = [
   {
-    resName: "Testaurant",
+    resName: "XYZ Diner",
     resCity: "Springfield",
-    resAddress: "123 Main Street Springfield",
+    resAddress: "123 Main Street, Springfield",
     resNotes: "Liked it",
     resHours: [
       {
         day: "Monday",
         isOpen: false,
-        resOpen: Null,
-        resClose: Null,
+        resOpen: null,
+        resClose: null,
       },
       {
         day: "Tuesday",
@@ -95,10 +95,60 @@ const restaurants = [
     resReviewNumber: 2567,
     resReviewRating: 4.3,
   },
+  {
+    resName: "ABC Diner",
+    resCity: "New Dell",
+    resAddress: "45 Main Street, New Dell",
+    resNotes: "It was Okay",
+    resHours: [
+      {
+        day: "Monday",
+        isOpen: true,
+        resOpen: 1700,
+        resClose: 2000,
+      },
+      {
+        day: "Tuesday",
+        isOpen: true,
+        resOpen: 1100,
+        resClose: 2000,
+      },
+      {
+        day: "Wednesday",
+        isOpen: true,
+        resOpen: 1100,
+        resClose: 2000,
+      },
+      {
+        day: "Thursday",
+        isOpen: true,
+        resOpen: 1100,
+        resClose: 2200,
+      },
+    ],
+    resReviewNumber: 11740,
+    resReviewRating: 3.7,
+  },
 ];
 
-const restaurantInfo = (query) => {
-  console.log(restaurants.resName);
-  console.log(restaurants.resAddress);
-  console.log(restaurants.resReviewRating);
+const restaurantInfo = (name) => {
+  debugger;
+  // currentRes = restaurants[0];
+  let currentRes = restaurants[{}];
+  for (let i = 0; i < restaurants.length; i++) {
+    if (restaurants[i].resName === name) {
+      currentRes = restaurants[i];
+    }
+  }
+  const currentResName = currentRes.resName;
+  const currentResAddress = currentRes.resAddress;
+  const currentResRating = currentRes.resReviewRating;
+  if (currentResName === name) {
+    console.log(
+      `${currentResName} has a ${currentResRating} star rating and is located at ${currentResAddress}.`
+    );
+  } else {
+    console.log("Im Sorry try again");
+  }
+  // This does nothing because currentRes is undefined
 };
