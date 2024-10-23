@@ -183,6 +183,36 @@ const contacts = [
   },
 ];
 
+const contactz =undefined;
+// console.log(contacts?.[3]?.car)
+// // const contactName = contacts[1];
+// const [contactName1,contactName,nameWho] = contacts;
+// const {car: contactCar, firstName} = contactName
+
+// // const contactCar = contactName.car;
+// const contactLicence = contactCar.licencePlateNumber
+
+// // console.log(contacts[0].car.damages[0].description)
+
+// console.log(nameWho)
+// // console.log(contactCar)
+
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false,
+};
+
+// console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+const object1Keys = Object.keys(object1);
+for (let i=0; i<object1Keys.length; i++){
+  const currentKey = object1Keys[i];
+  console.log(object1[currentKey]);
+}
+
+// iterate over an object
+
 // const secondContact = contacts[1];
 // console.log(secondContact);
 // const lastNameOfSecondContact = secondContact.lastName
@@ -194,3 +224,4 @@ const secondObj = firstContactCarDamages[1];
 // console.log(secondObj.description)
 
 console.log(contacts[0].car.damages[1].description);
+
