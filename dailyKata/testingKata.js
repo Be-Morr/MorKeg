@@ -1,3 +1,4 @@
+ 
 // function disemvowel(str) {
 //   debugger;
 //   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
@@ -12,13 +13,3 @@
 //     } else {
 //       consol.log(targetLetter);
 //     }
-//   }
-//   return newString.trim();
-// }
-
-// const testVowel = (str) => {
-//   debugger;
-//   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-//   console.log(vowels.includes(str));
-// };
-
