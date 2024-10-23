@@ -247,6 +247,7 @@ const range = (start, end, step = 1) => {
 //   return shortestWord - 1;
 // };
 
+
 // Welcome.
 
 // In this kata you are required to, given a string, replace every letter with its position in the alphabet.
