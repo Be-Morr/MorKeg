@@ -17,8 +17,17 @@ buttonInput.addEventListener("click", () => {
   contentElement.innerHTML = `<ul>${listOfToDosAsHtml}</ul>`;
   console.log(listOfToDos);
 });
-contentElement.addEventListener("click", (e) => {
-  if (e.target.innerHTML.contains("listOfToDos")) {
-    e.target.classList.toggle("strike");
-  }
+// contentElement.addEventListener("click", (e) => {
+//   if (e.target.innerHTML.contains("listOfToDos")) {
+//     e.target.classList.toggle("strike");
+//   }
+// });
+// const list = document.getElementById('addItem');
+
+document.addEventListener('DOMContentLoaded', () => {
+contentElement.addEventListener('click', (event) => {
+    if (event.target.tagName === "content") {
+        event.target.classList.toggle('strike');
+    }
+});
 });
