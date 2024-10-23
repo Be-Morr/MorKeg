@@ -65,90 +65,23 @@ const restaurants = [
     resName: "XYZ Diner",
     resCity: "Springfield",
     resAddress: "123 Main Street, Springfield",
-    resNotes: "Liked it",
-    resHours: [
-      {
-        day: "Monday",
-        isOpen: false,
-        resOpen: null,
-        resClose: null,
-      },
-      {
-        day: "Tuesday",
-        isOpen: true,
-        resOpen: 1100,
-        resClose: 2000,
-      },
-      {
-        day: "Wednesday",
-        isOpen: true,
-        resOpen: 1100,
-        resClose: 2000,
-      },
-      {
-        day: "Thursday",
-        isOpen: true,
-        resOpen: 1100,
-        resClose: 2200,
-      },
-    ],
-    resReviewNumber: 2567,
-    resReviewRating: 4.3,
-  },
-  {
-    resName: "ABC Diner",
-    resCity: "New Dell",
-    resAddress: "45 Main Street, New Dell",
-    resNotes: "It was Okay",
-    resHours: [
-      {
-        day: "Monday",
-        isOpen: true,
-        resOpen: 1700,
-        resClose: 2000,
-      },
-      {
-        day: "Tuesday",
-        isOpen: true,
-        resOpen: 1100,
-        resClose: 2000,
-      },
-      {
-        day: "Wednesday",
-        isOpen: true,
-        resOpen: 1100,
-        resClose: 2000,
-      },
-      {
-        day: "Thursday",
-        isOpen: true,
-        resOpen: 1100,
-        resClose: 2200,
-      },
-    ],
-    resReviewNumber: 11740,
-    resReviewRating: 3.7,
-  },
-];
+// // Producing an array of strings, not digits. instead of convertring them back to numbers, is there a way to cut the string portion out
 
-const restaurantInfo = (name) => {
-  debugger;
-  // currentRes = restaurants[0];
-  let currentRes = restaurants[{}];
-  for (let i = 0; i < restaurants.length; i++) {
-    if (restaurants[i].resName === name) {
-      currentRes = restaurants[i];
-    }
-  }
-  const currentResName = currentRes.resName;
-  const currentResAddress = currentRes.resAddress;
-  const currentResRating = currentRes.resReviewRating;
-  if (currentResName === name) {
-    console.log(
-      `${currentResName} has a ${currentResRating} star rating and is located at ${currentResAddress}.`
-    );
-  } else {
-    console.log("Im Sorry try again");
-  }
-  // This does nothing because currentRes is undefined
+   
+const digitize = (n) => {
+  const nString = `${n}`;
+  const nStringArray = nString.split("");
+  const nNumberArray = nStringArray.map(Number);
+  return nNumberArray.reverse();
 };
+
+// Convert number to a string
+//Convert the String into an array of strings for each digit in the number
+//Convert the Array of strings back to numbers
+//Return the Array of numbers back in reverse order.
+// This can be simplified into
+// function digitize(n) {
+//   return String(n).split('').map(Number).reverse()
+// }
+
+
