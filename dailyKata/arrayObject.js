@@ -182,6 +182,7 @@ const contacts = [
     },
   },
 ];
+
 const contactz =undefined;
 // console.log(contacts?.[3]?.car)
 // // const contactName = contacts[1];
@@ -211,4 +212,16 @@ for (let i=0; i<object1Keys.length; i++){
 }
 
 // iterate over an object
+
+// const secondContact = contacts[1];
+// console.log(secondContact);
+// const lastNameOfSecondContact = secondContact.lastName
+// console.log (lastNameOfSecondContact);
+const firstContact = contacts[0];
+const fistContactCar = firstContact.car;
+const firstContactCarDamages = fistContactCar.damages;
+const secondObj = firstContactCarDamages[1];
+// console.log(secondObj.description)
+
+console.log(contacts[0].car.damages[1].description);
 
