@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="main.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This should be a title</title>
+  </head>
+
+  <body>
+    <p class="hello-snake">Todo List</p>
+    <label for="newTask">New Task</label>
+
+    <input
+      type="text"
+      id="newTask"
+      newTask="newTask"
+      required
+      minlength="4"
+      maxlength="15"
+      size="20"
+    />
+
+    <button class="buttonStyle" id="addItem">Add</button>
+    <div id="content"></div>
+
+    <!-- <script src="index.js"></script> -->
+
+    <script src="todo.js"></script>
+  </body>
+</html>

@@ -247,6 +247,44 @@ const range = (start, end, step = 1) => {
 //   return shortestWord - 1;
 // };
 
+// Welcome.
+
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+// If anything in the text isn't a letter, ignore it and don't return it.
+
+// "a" = 1, "b" = 2, etc.
+// Example
+
+// Input = "The sunset sets at twelve o' clock."
+// Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+
+function alphabetPosition(text) {
+  const stringAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  let numericalLetter = "";
+  let lowercaseText = text.toLowerCase();
+  for (
+    let targetLetter = 0;
+    targetLetter < lowercaseText.length;
+    targetLetter++
+  ) {
+    const targetChar = lowercaseText.charAt(targetLetter);
+    for (
+      let referenceLetter = 0;
+      referenceLetter < stringAlphabet.length;
+      referenceLetter++
+    ) {
+      const referenceChar = stringAlphabet.charAt(referenceLetter);
+      if (referenceChar === targetChar) {
+        numericalLetter += referenceLetter + 1;
+        numericalLetter += " ";
+      }
+    }
+  }
+  return numericalLetter.trim();
+}
+
+console.log(alphabetPosition("ebc."));
 const findShort = (s) => {
   const words = s.split(" ");
   //Splits a string into an array
@@ -261,3 +299,29 @@ const findShort = (s) => {
   }
   return shortestWord;
 };
+
+// function disemvowel(str) {
+// const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+//   const newString = "";
+//   for (i = 0; i < str.length; i++) {
+//     if (vowels.includes(str.charAt(i)) !== true) {
+//       newString + str.charAt(i);
+//       newString.trim();
+//     }
+//   }
+//   return newString;
+
+function disemvowel(str) {
+  debugger;
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  strArray = str.split("");
+  const targetLetter = "";
+  const newString = "";
+  for (i = 0; i < strArray.length; i++) {
+    const targetLetter = strArray[i];
+    if (strArray[i] !== vowels.includes(targetLetter)) {
+      newString + strArray[i];
+    }
+  }
+  return newString;
+}
