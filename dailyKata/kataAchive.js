@@ -327,3 +327,41 @@ function disemvowel(str) {
   return newString;
 }
 
+// Very simple, given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+
+// Examples:
+
+// 1: -1
+// 14: -14
+// -34: 34
+
+function opposite(number) {
+  return number * -1;
+}
+//  You can do the same thing with (-number)
+// function opposite(number) {
+//   return(-number);
+// }
+
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+function fakeBin(x) {
+  let newString = "";
+  for (i = 0; i < x.length; i++) {
+    const targetNumber = Number(x.charAt(i));
+    if (targetNumber < 5) {
+      newString += "0";
+    } else {
+      newString += "1";
+    }
+  }
+  return newString;
+}
+
+// The split and map solution I was thinking about is this:
+// function fakeBin(x) {
+//   return x.split('').map(n => n < 5 ? 0 : 1).join('');
+// }
