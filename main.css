@@ -28,7 +28,9 @@ p1 {
 .strike {
   text-decoration: line-through;
 }
-
+/* body {
+  background-color: aqua;
+} */
 #content .listOfTodos {
   margin: 0 0 25px;
 }
