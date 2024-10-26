@@ -365,3 +365,11 @@ function fakeBin(x) {
 // function fakeBin(x) {
 //   return x.split('').map(n => n < 5 ? 0 : 1).join('');
 // }
+
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+
+function boolToWord(bool) {
+  return bool === true ? "Yes" : "No";
+}
+// Do you even need return
