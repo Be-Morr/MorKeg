@@ -247,7 +247,6 @@ const range = (start, end, step = 1) => {
 //   return shortestWord - 1;
 // };
 
-
 // Welcome.
 
 // In this kata you are required to, given a string, replace every letter with its position in the alphabet.
@@ -343,7 +342,6 @@ function opposite(number) {
 //   return(-number);
 // }
 
-
 // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 
 // Note: input will never be an empty string
@@ -368,8 +366,29 @@ function fakeBin(x) {
 
 // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
-
 function boolToWord(bool) {
   return bool === true ? "Yes" : "No";
 }
 // Do you even need return
+
+// The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+// To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+// Input
+
+// Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+// Output
+
+// Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+function openOrSenior(data) {
+  output = [];
+  for (i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] > 7) {
+      output.push("Senior");
+    } else {
+      output.push("Open");
+    }
+  }
+  return output;
+}
+// Learn to use the map function!!
