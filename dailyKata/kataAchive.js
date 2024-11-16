@@ -366,12 +366,11 @@ function fakeBin(x) {
 
 // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
+
 function boolToWord(bool) {
   return bool === true ? "Yes" : "No";
 }
 // Do you even need return
-
-
 
 // The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
 
@@ -394,3 +393,4 @@ function openOrSenior(data) {
   return output;
 }
 // Learn to use the map function!!
+
